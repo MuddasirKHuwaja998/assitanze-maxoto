@@ -3,62 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assistenza Clienti | Maxoto</title>
+    <title>Supporto Clienti | Maxoto</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@0;1&family=Public+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <header class="navbar">
-        <div class="container">
-            <img src="logo.png" alt="Maxoto Logo" class="nav-logo">
+        <div class="container navbar-container">
+            <img src="logo.png" alt="Maxoto" class="brand-logo">
+            <span class="support-label">Area Assistenza</span>
         </div>
     </header>
 
-    <section class="hero-section">
-        <div class="container">
-            <h1>Servizio di Assistenza</h1>
-            <p>Benvenuti nel portale di supporto Maxoto. Gestiamo ogni richiesta con precisione e cura.</p>
-        </div>
-    </section>
+    <main class="page-content">
+        <div class="container container-narrow">
+            <div class="intro-text">
+                <h1>Modulo di Contatto</h1>
+                <p>Gentile Cliente, la preghiamo di compilare i campi sottostanti. Il nostro team la ricontatterà entro 24 ore lavorative.</p>
+            </div>
 
-    <main class="container">
-        <div class="form-wrapper">
-            <form action="#">
-                <div class="grid-row">
-                    <div class="field">
-                        <label>Nome Completo</label>
-                        <input type="text" placeholder="Es. Alessandro Riva" required>
+            <section class="form-box">
+                <form action="#">
+                    <div class="form-grid">
+                        <div class="input-field">
+                            <label>Nome e Cognome</label>
+                            <input type="text" placeholder="Es. Giuseppe Verdi" required>
+                        </div>
+                        <div class="input-field">
+                            <label>E-mail Aziendale</label>
+                            <input type="email" placeholder="nome@societa.it" required>
+                        </div>
                     </div>
-                    <div class="field">
-                        <label>Email Professionale</label>
-                        <input type="email" placeholder="nome@azienda.it" required>
+
+                    <div class="input-field">
+                        <label>Oggetto della Segnalazione</label>
+                        <select>
+                            <option>Assistenza Tecnica AI</option>
+                            <option>Informazioni Commerciali</option>
+                            <option>Problemi di Fatturazione</option>
+                            <option>Supporto Tecnico Generale</option>
+                        </select>
                     </div>
-                </div>
 
-                <div class="field">
-                    <label>Settore di Interesse</label>
-                    <select>
-                        <option>Supporto Tecnico AI</option>
-                        <option>Gestione Abbonamenti</option>
-                        <option>Consulenza Strategica</option>
-                        <option>Altro</option>
-                    </select>
-                </div>
+                    <div class="input-field">
+                        <label>Messaggio</label>
+                        <textarea rows="5" placeholder="Descriva la sua richiesta nei dettagli..."></textarea>
+                    </div>
 
-                <div class="field">
-                    <label>Dettaglio della Richiesta</label>
-                    <textarea rows="6" placeholder="Descriva qui le sue necessità..."></textarea>
-                </div>
-
-                <button type="submit" class="main-button">Invia il Modulo</button>
-            </form>
+                    <button type="submit" class="submit-button">Invia Richiesta</button>
+                </form>
+            </section>
         </div>
     </main>
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 Maxoto. Eccellenza e Innovazione Digitale.</p>
+            <p>&copy; 2026 Maxoto. Tutti i diritti riservati.</p>
         </div>
     </footer>
 
