@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centro Assistenza Clienti | Maxoto</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <img src="logo.png" alt="Maxoto Logo" class="brand-logo">
+        </div>
+    </header>
+
+    <div class="page-wrapper">
+        <main class="container">
+            <header class="form-header">
+                <h1>Richiesta di Assistenza</h1>
+                <p>Siamo a vostra completa disposizione. Compilate il modulo sottostante per connettervi con un nostro specialista.</p>
+            </header>
+
+            <section class="support-card">
+                <form action="#" method="POST">
+                    <div class="input-row">
+                        <div class="input-group">
+                            <label>Nome e Cognome</label>
+                            <input type="text" name="full_name" placeholder="E.g. Mario Rossi" required>
+                        </div>
+                        <div class="input-group">
+                            <label>Email Aziendale</label>
+                            <input type="email" name="email" placeholder="nome@azienda.it" required>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Oggetto della Richiesta</label>
+                        <select name="category">
+                            <option value="tech">Supporto Tecnico</option>
+                            <option value="billing">Amministrazione e Fatturazione</option>
+                            <option value="sales">Informazioni Commerciali</option>
+                            <option value="other">Altro</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Dettagli del Messaggio</label>
+                        <textarea name="message" rows="5" placeholder="Come possiamo aiutarvi?" required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Invia Messaggio</button>
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <footer class="simple-footer">
+        <div class="container">
+            <p>&copy; 2026 Maxoto. Professionalità e Innovazione.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

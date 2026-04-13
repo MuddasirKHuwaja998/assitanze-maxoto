@@ -1,0 +1,147 @@
+/* Professional Palette */
+:root {
+    --deep-green: #0a3d2e;     /* Professional Forest Green */
+    --accent-green: #2d6a4f;   /* Lighter accent */
+    --bg-light: #f4f7f6;       /* Neutral gray-green background */
+    --text-main: #2c3e50;
+    --white: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-main);
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+/* Header */
+.main-header {
+    background: var(--white);
+    padding: 25px 0;
+    border-bottom: 1px solid #e1e8e5;
+    text-align: center;
+}
+
+.brand-logo {
+    height: 55px; /* Adjust height based on your logo design */
+    width: auto;
+}
+
+/* Page Layout */
+.page-wrapper {
+    padding: 60px 0;
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.form-header h1 {
+    font-family: 'Lora', serif;
+    font-size: 2.2rem;
+    color: var(--deep-green);
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.form-header p {
+    color: #6a7974;
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+
+/* Card Styling */
+.support-card {
+    background: var(--white);
+    padding: 50px;
+    border-radius: 2px; /* Very slight rounding for modern professional look */
+    box-shadow: 0 15px 35px rgba(10, 61, 46, 0.05);
+}
+
+.input-row {
+    display: flex;
+    gap: 25px;
+}
+
+.input-group {
+    flex: 1;
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    color: var(--deep-green);
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #dbe2e0;
+    border-radius: 0; /* Clean, sharp edges */
+    font-family: inherit;
+    font-size: 0.95rem;
+    color: var(--text-main);
+    transition: all 0.2s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--accent-green);
+    background-color: #fafcfb;
+}
+
+/* Submit Button */
+.submit-btn {
+    width: 100%;
+    background-color: var(--deep-green);
+    color: var(--white);
+    padding: 18px;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: var(--accent-green);
+}
+
+/* Footer */
+.simple-footer {
+    padding: 40px 0;
+    text-align: center;
+    color: #889491;
+    font-size: 0.8rem;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    .input-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    .support-card {
+        padding: 30px 20px;
+    }
+}
