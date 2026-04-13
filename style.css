@@ -1,147 +1,142 @@
-/* Professional Palette */
+/* Root Variables for easy maintenance */
 :root {
-    --deep-green: #0a3d2e;     /* Professional Forest Green */
-    --accent-green: #2d6a4f;   /* Lighter accent */
-    --bg-light: #f4f7f6;       /* Neutral gray-green background */
-    --text-main: #2c3e50;
+    --primary-green: #064e3b;   /* Deep Emerald */
+    --soft-green: #ecf3f1;      /* Background Tint */
+    --border-green: #d1dbd8;
+    --text-dark: #1f2937;
     --white: #ffffff;
 }
 
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: var(--bg-light);
-    color: var(--text-main);
-    -webkit-font-smoothing: antialiased;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--soft-green);
+    color: var(--text-dark);
+    line-height: 1.6;
 }
 
 .container {
-    max-width: 850px;
+    max-width: 900px;
     margin: 0 auto;
-    padding: 0 30px;
+    padding: 0 20px;
 }
 
-/* Header */
-.main-header {
+/* Navbar */
+.navbar {
     background: var(--white);
-    padding: 25px 0;
-    border-bottom: 1px solid #e1e8e5;
+    padding: 20px 0;
     text-align: center;
+    border-bottom: 1px solid var(--border-green);
 }
 
-.brand-logo {
-    height: 55px; /* Adjust height based on your logo design */
+.nav-logo {
+    height: 60px; /* Adjusted for better visibility */
     width: auto;
+    display: inline-block;
 }
 
-/* Page Layout */
-.page-wrapper {
-    padding: 60px 0;
-}
-
-.form-header {
+/* Hero */
+.hero-section {
+    padding: 60px 0 40px;
     text-align: center;
-    margin-bottom: 40px;
 }
 
-.form-header h1 {
-    font-family: 'Lora', serif;
-    font-size: 2.2rem;
-    color: var(--deep-green);
-    font-weight: 400;
-    margin-bottom: 15px;
+.hero-section h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem;
+    color: var(--primary-green);
+    margin-bottom: 10px;
 }
 
-.form-header p {
-    color: #6a7974;
+.hero-section p {
     font-size: 1.1rem;
+    color: #4b5563;
     font-weight: 300;
 }
 
-/* Card Styling */
-.support-card {
+/* Form Container */
+.form-wrapper {
     background: var(--white);
     padding: 50px;
-    border-radius: 2px; /* Very slight rounding for modern professional look */
-    box-shadow: 0 15px 35px rgba(10, 61, 46, 0.05);
+    border: 1px solid var(--border-green);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    margin-bottom: 100px;
 }
 
-.input-row {
-    display: flex;
-    gap: 25px;
+.grid-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
 }
 
-.input-group {
-    flex: 1;
+.field {
     margin-bottom: 25px;
 }
 
 label {
     display: block;
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 0.05em;
     margin-bottom: 10px;
-    color: var(--deep-green);
+    color: var(--primary-green);
 }
 
 input, select, textarea {
     width: 100%;
-    padding: 14px;
-    border: 1px solid #dbe2e0;
-    border-radius: 0; /* Clean, sharp edges */
-    font-family: inherit;
-    font-size: 0.95rem;
-    color: var(--text-main);
-    transition: all 0.2s ease;
+    padding: 12px 15px;
+    border: 1px solid var(--border-green);
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: var(--text-dark);
+    transition: border-color 0.2s;
 }
 
 input:focus, select:focus, textarea:focus {
     outline: none;
-    border-color: var(--accent-green);
-    background-color: #fafcfb;
+    border-color: var(--primary-green);
+    background-color: #f9fafb;
 }
 
-/* Submit Button */
-.submit-btn {
+/* Button */
+.main-button {
     width: 100%;
-    background-color: var(--deep-green);
+    background-color: var(--primary-green);
     color: var(--white);
-    padding: 18px;
     border: none;
+    padding: 18px;
     font-size: 1rem;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 1.5px;
+    letter-spacing: 0.1em;
     cursor: pointer;
-    transition: background 0.3s ease;
+    transition: opacity 0.3s;
 }
 
-.submit-btn:hover {
-    background-color: var(--accent-green);
+.main-button:hover {
+    opacity: 0.9;
 }
 
 /* Footer */
-.simple-footer {
-    padding: 40px 0;
+.footer {
     text-align: center;
-    color: #889491;
-    font-size: 0.8rem;
+    padding: 40px 0;
+    font-size: 0.9rem;
+    color: #6b7280;
 }
 
-/* Mobile Responsiveness */
-@media (max-width: 600px) {
-    .input-row {
-        flex-direction: column;
-        gap: 0;
+/* Responsive */
+@media (max-width: 768px) {
+    .grid-row {
+        grid-template-columns: 1fr;
     }
-    .support-card {
+    .form-wrapper {
         padding: 30px 20px;
     }
 }
