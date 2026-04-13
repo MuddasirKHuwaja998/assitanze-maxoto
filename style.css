@@ -1,10 +1,10 @@
-/* Root Variables for easy maintenance */
+/* Professional Green Palette */
 :root {
-    --primary-green: #064e3b;   /* Deep Emerald */
-    --soft-green: #ecf3f1;      /* Background Tint */
-    --border-green: #d1dbd8;
-    --text-dark: #1f2937;
-    --white: #ffffff;
+    --nav-light-green: #e9f5f2; /* Light Green for Navbar */
+    --deep-green: #14362d;      /* Deep Green for text/buttons */
+    --border-soft: #d0dad7;     /* Subtle border */
+    --body-bg: #ffffff;
+    --text-gray: #4a5553;
 }
 
 * {
@@ -14,129 +14,142 @@
 }
 
 body {
-    font-family: 'Inter', sans-serif;
-    background-color: var(--soft-green);
-    color: var(--text-dark);
-    line-height: 1.6;
+    font-family: 'Public Sans', sans-serif;
+    background-color: var(--body-bg);
+    color: var(--deep-green);
+    line-height: 1.5;
 }
 
 .container {
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-/* Navbar */
+.container-narrow {
+    max-width: 750px;
+}
+
+/* Navbar with Light Green Container */
 .navbar {
-    background: var(--white);
+    background-color: var(--nav-light-green);
     padding: 20px 0;
-    text-align: center;
-    border-bottom: 1px solid var(--border-green);
+    border-bottom: 1px solid var(--border-soft);
 }
 
-.nav-logo {
-    height: 60px; /* Adjusted for better visibility */
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand-logo {
+    height: 50px; /* Your gray logo will look very clean on the light green bg */
     width: auto;
-    display: inline-block;
 }
 
-/* Hero */
-.hero-section {
-    padding: 60px 0 40px;
+.support-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: var(--deep-green);
+}
+
+/* Main Content */
+.page-content {
+    padding: 80px 0;
+}
+
+.intro-text {
     text-align: center;
+    margin-bottom: 50px;
 }
 
-.hero-section h1 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 3rem;
-    color: var(--primary-green);
+.intro-text h1 {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 2.4rem;
     margin-bottom: 10px;
+    color: var(--deep-green);
 }
 
-.hero-section p {
-    font-size: 1.1rem;
-    color: #4b5563;
+.intro-text p {
+    color: var(--text-gray);
     font-weight: 300;
 }
 
-/* Form Container */
-.form-wrapper {
-    background: var(--white);
-    padding: 50px;
-    border: 1px solid var(--border-green);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
-    margin-bottom: 100px;
+/* Professional Form Box */
+.form-box {
+    background: #fff;
+    padding: 40px;
+    border: 1px solid var(--border-soft);
 }
 
-.grid-row {
+.form-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
 }
 
-.field {
+.input-field {
     margin-bottom: 25px;
 }
 
 label {
     display: block;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin-bottom: 10px;
-    color: var(--primary-green);
+    margin-bottom: 8px;
+    color: var(--deep-green);
 }
 
 input, select, textarea {
     width: 100%;
-    padding: 12px 15px;
-    border: 1px solid var(--border-green);
-    font-family: 'Inter', sans-serif;
-    font-size: 1rem;
-    color: var(--text-dark);
-    transition: border-color 0.2s;
+    padding: 12px;
+    border: 1px solid var(--border-soft);
+    font-family: 'Public Sans', sans-serif;
+    font-size: 0.95rem;
+    color: #333;
+    transition: all 0.2s ease;
 }
 
 input:focus, select:focus, textarea:focus {
     outline: none;
-    border-color: var(--primary-green);
-    background-color: #f9fafb;
+    border-color: var(--deep-green);
+    background-color: #fcfdfd;
 }
 
-/* Button */
-.main-button {
+/* Professional Button */
+.submit-button {
     width: 100%;
-    background-color: var(--primary-green);
-    color: var(--white);
+    background-color: var(--deep-green);
+    color: white;
     border: none;
-    padding: 18px;
-    font-size: 1rem;
+    padding: 16px;
+    font-size: 0.9rem;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
+    letter-spacing: 1px;
     cursor: pointer;
-    transition: opacity 0.3s;
+    transition: background 0.3s;
 }
 
-.main-button:hover {
-    opacity: 0.9;
+.submit-button:hover {
+    background-color: #0b221c;
 }
 
 /* Footer */
 .footer {
     text-align: center;
     padding: 40px 0;
-    font-size: 0.9rem;
-    color: #6b7280;
+    font-size: 0.8rem;
+    color: #99a5a2;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .grid-row {
+/* Mobile Layout */
+@media (max-width: 600px) {
+    .form-grid {
         grid-template-columns: 1fr;
-    }
-    .form-wrapper {
-        padding: 30px 20px;
     }
 }
